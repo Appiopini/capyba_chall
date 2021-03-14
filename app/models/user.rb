@@ -1,5 +1,6 @@
 class User < ApplicationRecord  
 has_person_name
+has_one_attateched :avatar
 attr_accessor :login
 
   # Include default devise modules. Others available are:
