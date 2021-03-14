@@ -8,6 +8,10 @@
     <div class="field">
       <%= image_tag(resources.avatar_thumbnail) if resource.avatar.attached? %>
     </div>
+
+    <div class="field">
+      <%= f.field :avatar %>
+    </div>
     
     <div class="input-group">
     <%= f.label :name, class:"label" %>

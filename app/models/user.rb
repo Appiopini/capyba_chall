@@ -3,6 +3,10 @@ has_person_name
 has_one_attateched :avatar
 attr_accessor :login
 
+  def avatar_thumbnail
+    avatar.variant(resize: "150x150!").processed
+  end
+  
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
