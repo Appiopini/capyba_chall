@@ -1,10 +1,14 @@
 class User < ApplicationRecord  
 has_person_name
-has_one_attateched :avatar
+has_one_attached :avatar
 attr_accessor :login
 
   def avatar_thumbnail
-    avatar.variant(resize: "150x150!").processed
+    if avatar.attached?
+      avatar.variant(resize: "150x150!").processed
+    else
+     "/images/default_profile.jpg"
+    end
   end
   
   # Include default devise modules. Others available are:

@@ -240,6 +240,7 @@ DEPENDENCIES
   name_of_person (~> 1.1, >= 1.1.1)
   puma (~> 4.1)
   rails (~> 6.0.3, >= 6.0.3.5)
+  redis
   sass-rails (>= 6)
   selenium-webdriver
   sidekiq (~> 6.1, >= 6.1.2)

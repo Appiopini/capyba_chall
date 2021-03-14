@@ -6,11 +6,11 @@
     <%= render "devise/shared/error_messages", resource: resource %>
     
     <div class="field">
-      <%= image_tag(resources.avatar_thumbnail) if resource.avatar.attached? %>
+      <%= image_tag(current_user.avatar_thumbnail) %>
     </div>
 
     <div class="field">
-      <%= f.field :avatar %>
+      <%= f.file_field :avatar %>
     </div>
     
     <div class="input-group">
